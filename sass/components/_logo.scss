@@ -1,0 +1,24 @@
+.logo {
+  text-decoration: none;
+  font-family: raleway, cursive;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.19;
+  margin-right: 93px;
+
+  &__footer {
+    margin-right: 0;
+  }
+}
+
+.logo__text {
+  color: var(--accent-color);
+
+  &--black {
+    color: var(--title-color);
+  }
+
+  &--white {
+    color: var(--primary-bg-color);
+  }
+}
