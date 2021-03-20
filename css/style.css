@@ -207,21 +207,147 @@ body {
   margin: 0;
   list-style: none;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (min-width: 1200px) {
+  .menu {
+    align-items: baseline;
+  }
 }
 
-.menu .link {
-  padding: 10px;
-  color: inherit;
+.menu__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 768px) {
+  .menu__list {
+    margin-right: 84px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .menu__list {
+    margin-right: 300px;
+  }
+}
+
+.menu__item {
+  margin-right: 50px;
+}
+
+.menu__item:last-child {
+  margin-right: 0px;
+}
+
+.menu__link {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  display: block;
+  color: var(--title-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
   text-decoration: none;
+  transition: color 250ms var(--cubic);
 }
 
-.menu .link:hover,
-.menu .link:focus {
-  text-decoration: underline;
+.menu__link:hover,
+.menu__link:focus {
+  color: var(--accent-color);
+}
+
+.menu__link--current {
+  position: relative;
+  display: block;
+  color: var(--accent-color);
+}
+
+.menu__link--current::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+  position: absolute;
+  left: 0px;
+  bottom: -1px;
 }
 
 @media (max-width: 767px) {
   .menu {
     display: none;
+  }
+}
+
+.menu-adress {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.menu-adress__link {
+  font-family: Roboto;
+  font-style: normal;
+  text-decoration: none;
+  color: var(--primary-text-color);
+  transition: color 250ms var(--cubic);
+}
+
+.menu-adress__link:hover,
+.menu-adress__link:focus {
+  color: var(--accent-color);
+}
+
+@media screen and (min-width: 768px) {
+  .menu-adress__link {
+    display: block;
+    font-size: 12px;
+    line-height: 1.166;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .menu-adress__link {
+    font-size: 14px;
+    line-height: 1.14;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.adress__svg {
+  margin-right: 8px;
+  fill: currentColor;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-adress__link:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .menu-adress__link:not(:last-child) {
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .menu-adress {
+    display: flex;
+
+    margin-right: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .menu-adress__link:not(:last-child) {
+    margin-right: 30px;
   }
 }
